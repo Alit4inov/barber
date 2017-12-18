@@ -1,0 +1,12 @@
+.main-nav {
+
+}
+
+.nav-list {
+	@extend %clearfix;
+	color: $white;
+	li {
+		display: inline-block;
+	}
+
+}

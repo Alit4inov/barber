@@ -1,0 +1,18 @@
+.contact {
+	display: flex;
+	justify-content: space-between;
+}
+
+.map-holder {
+	width: 50%;
+	background-color: $gray;
+}
+
+.contact-info {
+	width: 50%;
+	background-color: $black;
+	color: $white;
+	a, p, address, strong {
+		color: inherit;
+	}
+}
