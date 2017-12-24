@@ -3,7 +3,7 @@ $black: #333;
 $white: #fff;
 
 
-$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif: 'Oswald', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
@@ -18,7 +18,7 @@ $vertical-rhythm: ($base-line-height * 1em);
 $base-min-width: 320px;
 
 // Links
-$base-link-color: $black;
+$base-link-color: $white;;
 
 // Buttons
 $btn-color: $white !default;

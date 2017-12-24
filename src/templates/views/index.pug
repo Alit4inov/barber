@@ -5,8 +5,8 @@ html(lang='en')
 		#wrapper
 			header#header
 				.logo-holder
-					a(href="#" alt="logo").logo LOGO
-						img(src="/")
+					a(href="#" alt="logo").logo
+						img(src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" height="auto")
 				nav.main-nav
 					span.nav-opener
 					ul.nav-list
@@ -20,26 +20,30 @@ html(lang='en')
 							a(href="") Контакты
 						li
 							a(href="") Запись
+				a(href="#main").scroll-btn
+					img(src="assets/images/razor.svg", alt="razer-logo")
 			main#main
 				section.gallery
 					h1.title Салон
 					.container
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
-						a(href="/").img-holder
-							img(src="/")
+						.row
+							.img-holder.wow.slideInLeft
+								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
+							.text-holder.wow.slideInRight
+								h3.h3.subtitle Lorem ipsum dolor.
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
+						.row
+							.img-holder.wow.slideInRight
+								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
+							.text-holder.wow.slideInLeft
+								h3.h3.subtitle Lorem ipsum dolor.
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
+						.row
+							.img-holder.wow.slideInRight
+								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
+							.text-holder.wow.slideInLeft
+								h3.h3.subtitle Lorem ipsum dolor.
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
 				section.services
 					h1.title Услуги
 					.container

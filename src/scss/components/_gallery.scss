@@ -1,22 +1,35 @@
 .gallery {
-	padding: 50px 0;
-	.title {
-		text-align: center;
+padding: 57px 0;
+background: url(../images/brick.jpg);
+background-size: 800px auto;
+.title{
+	margin-bottom:55px;
+		}
+}
+.row{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+
+	&:nth-child(2n){
+		flex-direction: row-reverse;
 	}
-	.container {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 1230px;
-		padding: 0 15px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+	.img-holder{
+		width: 50%;
+		padding: 15px;
+		img{
+			width: 100%;
+			vertical-align: top;
+		}
 	}
-	.img-holder {
-		display: block;
-		width: calc(25% - 30px);
-		margin-bottom: 30px;
-		height: 200px;
-		background-color: $gray;
+	.text-holder{
+		padding: 45px;
+		font-size: 16px;
+		width: 50%;
+background-color: rgba(255,255,255,.85);
+		.h3{
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
 	}
 }

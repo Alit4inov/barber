@@ -4,7 +4,63 @@
 	flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    background-color: $gray;
+	background-color: $gray;
+	background-image:url('../images/banner-image.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	position: relative;
+	.scroll-btn{
+		position: absolute;
+		bottom: 20px;
+		left:50%;
+		transform:margin-left(-23px);
+
+		width:46px;
+		animation: jump 2.0s ease 0s infinite normal ;
+	
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.nav-list{
+		@extend %listreset;
+		margin-top: 30px;
+		position: relative;
+		
+		&:before{
+			position: absolute;
+			left: -9999px;
+			top:-5px;
+			bottom:-5px;
+			right:-9999px;
+			background: #000;
+			content:"";
+			z-index: 1;
+			border:1px solid white;
+		}
+		li{
+			padding: 0 0px;
+position: relative;
+z-index: 2;
+			a{
+				text-decoration: none;
+				font-weight: 400;
+				font-size: 18px;
+				letter-spacing: 1.8px;
+				padding:10px;
+				@include animate(background-color color);
+				background-size: 0 0 ;
+				border-radius: 3px;
+				&:hover{
+					color:$black;
+					background: $white;
+					
+				}
+			}
+		}
+	}
 }
 
 .logo-holder {
@@ -13,5 +69,51 @@
 }
 
 .logo {
-	display: inline-block
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	opacity: .7;
+	@include animate(opacity);
+	&:hover{
+		opacity: .95;
+	}
+	img{
+		position: relative;
+		z-index: 3;
+		
+	}
+	&:before{
+		z-index: 1;
+		content: '';
+		position: absolute;
+		top:-20px;
+		left: -20px;
+		right: -20px;
+		bottom:-20px;
+		border-radius: 50px;
+		background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.015) 70%,rgba(255,255,255,0) 100%); 
+	}
 }
+@keyframes jump {
+	0%{
+	  transform: translateY(0);
+	}
+	20%{
+	  transform: translateY(0);
+	}
+	40%{
+	  transform: translateY(-30px);
+	}
+	50%{
+	  transform: translateY(0);
+	}
+	60%{
+	  transform: translateY(-15px);
+	}
+	80%{
+	  transform: translateY(0);
+	}
+	100%{
+	  transform: translateY(0);
+	}
+  }
