@@ -11,20 +11,81 @@ html(lang='en')
 					span.nav-opener
 					ul.nav-list
 						li
-							a(href="") Салон
+							a(href="#gallery1") Салон
 						li
-							a(href="") Услуги
+							a(href="#services") Услуги
 						li
-							a(href="") Мастера
+							a(href="#team") Мастера
 						li
-							a(href="") Контакты
+							a(href="#contacts") Контакты
 						li
-							a(href="") Запись
+							a(href="#record") Запись
+						li.social
+							a(href="#" target="_blank")
+								<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						li.social
+							a(href="#" target="_blank")
+								<i class="fa fa-instagram" aria-hidden="true"></i>
 				a(href="#main").scroll-btn
 					img(src="assets/images/razor.svg", alt="razer-logo")
 			main#main
-				section.gallery
+				.section.gallery#gallery1
 					h1.title Салон
+					.container
+						.gallery-wrapper
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+							a(href="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="http://hudsonmod.com/wp-content/uploads/2013/03/TRIM_Barber_Salon_1.jpg", alt="img descr")
+
+				section.services#services
+					h1.title Услуги
+					.container
+						.boxes-holder
+							.text-block.wow.fadeIn
+								strong.title2 Заголовок
+								ul.marked-list
+									li Услуга 1 <strong>200 грн.</strong>
+									li Услуга 2 <strong>200 грн.</strong>
+									li Услуга 3 <strong>200 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Заголовок
+								ul.marked-list
+									li Услуга 1 <strong>200 грн.</strong>
+									li Услуга 2 <strong>200 грн.</strong>
+									li Услуга 3 <strong>200 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Заголовок
+								ul.marked-list
+									li Услуга 1 <strong>200 грн.</strong>
+									li Услуга 2 <strong>200 грн.</strong>
+									li Услуга 3 <strong>200 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Заголовок
+								ul.marked-list
+									li Услуга 1 <strong>200 грн.</strong>
+									li Услуга 2 <strong>200 грн.</strong>
+									li Услуга 3 <strong>200 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Заголовок
+								ul.marked-list
+									li Услуга 1 <strong>200 грн.</strong>
+									li Услуга 2 <strong>200 грн.</strong>
+									li Услуга 3 <strong>200 грн.</strong>
+				section.about#about
+					h1.title О нас
 					.container
 						.row
 							.img-holder.wow.slideInLeft
@@ -44,46 +105,54 @@ html(lang='en')
 							.text-holder.wow.slideInLeft
 								h3.h3.subtitle Lorem ipsum dolor.
 								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
-				section.services
-					h1.title Услуги
-					.container
-						.text-block
-							strong.title Заголовок
-							ul.marked-list
-								li Услуга 1
-								li Услуга 2
-								li Услуга 3
-						.text-block
-							strong.title Заголовок
-							ul.marked-list
-								li Услуга 1
-								li Услуга 2
-								li Услуга 3
-						.text-block
-							strong.title Заголовок
-							ul.marked-list
-								li Услуга 1
-								li Услуга 2
-								li Услуга 3
-				section.about-us
-					h1.title О нас
-					.container
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac dictum odio, et pharetra lectus. Duis sodales lorem mi, a finibus magna ullamcorper nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc mollis mauris libero, pulvinar interdum dui venenatis et. Donec iaculis felis odio, eget condimentum libero eleifend et. Sed nec arcu neque. Sed congue porta orci, fringilla condimentum odio. Nulla ut ligula a magna auctor posuere. Ut eu laoreet ante, et accumsan purus. Etiam dolor leo, sodales non neque vitae, ultrices efficitur nisl. Nunc vulputate euismod nulla viverra gravida. Integer sed sagittis lectus. Suspendisse malesuada vitae tortor eu facilisis 	
-				section.team
+				section.team.section#team
 					h1.title Мастера
 					.container
-						ul.thumbs-list
-							li Мастер 1
-							li Мастер 2
-							li Мастер 3
-							li Мастер 4
+						.team-list
+							.employee-box
+								.img-holder
+									img(src="https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/season_1/futurama_01_0102_zoidberg_physical_640x360.jpg?quality=0.85&width=640&height=361&crop=true", alt="")
+								.share-row
+									a(href="#" target="_blank")
+										<i class="fa fa-facebook-official" aria-hidden="true"></i>
+									a(href="#" target="_blank")
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+								.name Zoidberg
+							.employee-box
+								.img-holder
+									img(src="http://dorkshelf.com/wordpress/wp-content/uploads//2014/07/Futurama-Fry.jpg", alt="")
+								.share-row
+									a(href="#" target="_blank")
+										<i class="fa fa-facebook-official" aria-hidden="true"></i>
+									a(href="#" target="_blank")
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+								.name J. Fry
+							.employee-box
+								.img-holder
+									img(src="https://vignette.wikia.nocookie.net/en.futurama/images/9/9e/Fry-Leela-futurama-967816_1024_768.jpg/revision/latest/top-crop/width/240/height/240?cb=20101109231854", alt="")
+								.share-row
+									a(href="#" target="_blank")
+										<i class="fa fa-facebook-official" aria-hidden="true"></i>
+									a(href="#" target="_blank")
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+								.name Lila
+							.employee-box
+								.img-holder
+									img(src="http://chezasite.com/wp-content/uploads/2017/07/futurama-wallpaper-1-1920x1080-925x544.jpg", alt="")
+								.share-row
+									a(href="#" target="_blank")
+										<i class="fa fa-facebook-official" aria-hidden="true"></i>
+									a(href="#" target="_blank")
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+								.name Bender							
 				section.contact
 						.map-holder
-							#map Карта
+							#map
 						.contact-info
 							h1.title Контакты
-							p время работы
+							p ©«Retrobarbershop™» 2001–2017
 							address Lorem ipsum dolor sit amet
+							.time График работы Call-центра
 							a(href="tel:12345678") 12345678
 							a(href="tel:12345678") 12345678
 							a(href="mail:mail@45678mail.com") mail@45678mail.com

@@ -5,5 +5,6 @@
 module.exports = [
   './node_modules/jquery/dist/jquery.js',
   './node_modules/wowjs/dist/wow.js',
-  './node_modules/smooth-scroll/dist/js/smooth-scroll.js'
+  './node_modules/smooth-scroll/dist/js/smooth-scroll.js',
+  './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 ];

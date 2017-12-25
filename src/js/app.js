@@ -12,6 +12,9 @@ import common from './modules/common';
   $(() => {
     new WOW().init();
     var scroll = new SmoothScroll('a[href*="#"]');
+
+     
+
   });
 
 })(jQuery);
