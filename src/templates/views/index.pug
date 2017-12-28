@@ -4,6 +4,7 @@ html(lang='en')
 	body
 		#wrapper
 			header#header
+				address.adress-top г.Харьков, проспект Независимости, 17
 				.logo-holder
 					a(href="#" alt="logo").logo
 						img(src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" height="auto")
@@ -15,8 +16,6 @@ html(lang='en')
 						li
 							a(href="#services") Услуги
 						li
-							a(href="#team") Мастера
-						li
 							a(href="#contacts") Контакты
 						li
 							a.ms_booking(href="#record") Запись
@@ -26,8 +25,9 @@ html(lang='en')
 						li.social
 							a(href="#" target="_blank")
 								<i class="fa fa-instagram" aria-hidden="true"></i>
-				a(href="#main").scroll-btn
-					img(src="assets/images/razor.svg", alt="razer-logo")
+				//- a(href="#main").scroll-btn
+				//- 	img(src="assets/images/razor.svg", alt="razer-logo")
+				
 			main#main
 				.section.gallery#gallery1
 					h1.title Салон
@@ -55,31 +55,32 @@ html(lang='en')
 					.container
 						.boxes-holder
 							.text-block.wow.fadeIn
-								strong.title2 Заголовок
+								strong.title2 Стрижка
 								ul.marked-list
-									li Услуга 1 <strong>200 грн.</strong>
-									li Услуга 2 <strong>200 грн.</strong>
+									li МУЖСКАЯ СТРИЖКА  <strong>250 грн.</strong>
+									li СТРИЖКА МАШИНКОЙ <strong>150 грн.</strong>
+									li КОРРЕКЦИЯ СТРИЖКИ  <strong>150 грн.</strong>
+									li УКЛАДКА ВОЛОС <strong>120 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Борода
+								ul.marked-list
+									li СТРИЖКА БОРОДЫ <strong>150 грн.</strong>
+									li КАНТОВКА БОРОДЫ  <strong>100 грн.</strong>
+									li БРИТЬЕ ОПАСНОЙ БРИТВОЙ  <strong>200 грн.</strong>
+							.text-block.wow.fadeIn
+								strong.title2 Усы
+								ul.marked-list
+									li СТРИЖКА УСОВ <strong>100 грн.</strong>
+									li укладка УСОВ  <strong>120 грн.</strong>
 									li Услуга 3 <strong>200 грн.</strong>
 							.text-block.wow.fadeIn
-								strong.title2 Заголовок
+								strong.title2 Детские стрижки
 								ul.marked-list
-									li Услуга 1 <strong>200 грн.</strong>
-									li Услуга 2 <strong>200 грн.</strong>
-									li Услуга 3 <strong>200 грн.</strong>
+									li Детская стрижка 1 <strong>200 грн.</strong>
+									li Детская стрижка 2 <strong>230 грн.</strong>
+									li Детская стрижка 3 <strong>220 грн.</strong>
 							.text-block.wow.fadeIn
-								strong.title2 Заголовок
-								ul.marked-list
-									li Услуга 1 <strong>200 грн.</strong>
-									li Услуга 2 <strong>200 грн.</strong>
-									li Услуга 3 <strong>200 грн.</strong>
-							.text-block.wow.fadeIn
-								strong.title2 Заголовок
-								ul.marked-list
-									li Услуга 1 <strong>200 грн.</strong>
-									li Услуга 2 <strong>200 грн.</strong>
-									li Услуга 3 <strong>200 грн.</strong>
-							.text-block.wow.fadeIn
-								strong.title2 Заголовок
+								strong.title2 Остальные услуги
 								ul.marked-list
 									li Услуга 1 <strong>200 грн.</strong>
 									li Услуга 2 <strong>200 грн.</strong>
@@ -89,68 +90,17 @@ html(lang='en')
 					.container
 						.row
 							.img-holder.wow.slideInLeft
-								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
+								img(src="https://barber-shop.su/wp-content/uploads/2016/10/barber-shop-2-3.jpg", alt="")
 							.text-holder.wow.slideInRight
 								h3.h3.subtitle Lorem ipsum dolor.
-								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
-						.row
-							.img-holder.wow.slideInRight
-								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
-							.text-holder.wow.slideInLeft
-								h3.h3.subtitle Lorem ipsum dolor.
-								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
-						.row
-							.img-holder.wow.slideInRight
-								img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOz9ew30b8aiKjgbG21aM5cCBkTeDI4KhWaxZmbsE5cYWSNmj", alt="")
-							.text-holder.wow.slideInLeft
-								h3.h3.subtitle Lorem ipsum dolor.
-								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
-				section.team.section#team
-					h1.title Мастера
-					.container
-						.team-list
-							.employee-box
-								.img-holder
-									img(src="https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/season_1/futurama_01_0102_zoidberg_physical_640x360.jpg?quality=0.85&width=640&height=361&crop=true", alt="")
-								.share-row
-									a(href="#" target="_blank")
-										<i class="fa fa-facebook-official" aria-hidden="true"></i>
-									a(href="#" target="_blank")
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-								.name Zoidberg
-							.employee-box
-								.img-holder
-									img(src="http://dorkshelf.com/wordpress/wp-content/uploads//2014/07/Futurama-Fry.jpg", alt="")
-								.share-row
-									a(href="#" target="_blank")
-										<i class="fa fa-facebook-official" aria-hidden="true"></i>
-									a(href="#" target="_blank")
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-								.name J. Fry
-							.employee-box
-								.img-holder
-									img(src="https://vignette.wikia.nocookie.net/en.futurama/images/9/9e/Fry-Leela-futurama-967816_1024_768.jpg/revision/latest/top-crop/width/240/height/240?cb=20101109231854", alt="")
-								.share-row
-									a(href="#" target="_blank")
-										<i class="fa fa-facebook-official" aria-hidden="true"></i>
-									a(href="#" target="_blank")
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-								.name Lila
-							.employee-box
-								.img-holder
-									img(src="http://chezasite.com/wp-content/uploads/2017/07/futurama-wallpaper-1-1920x1080-925x544.jpg", alt="")
-								.share-row
-									a(href="#" target="_blank")
-										<i class="fa fa-facebook-official" aria-hidden="true"></i>
-									a(href="#" target="_blank")
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-								.name Bender							
-				section.contact
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In temorem, ipsum dolor sit amet consectetur adipisicing elit. In temorem, ipsum dolor sit amet consectetur adipisicing elit. In temorem, ipsum dolor sit amet consectetur adipisicing elit. In temorem, ipsum dolor sit amet consectetur adipisicing elit. In temorem, ipsum dolor sit amet consectetur adipisicing elit. In tempora delectus, impedit eos voluptatibus quod facere. Sapiente velit tempore culpa animi, quas mollitia ea accusamus? Ex et nostrum praesentium! Recusandae.
+						
+				section.contact#contacts
 						.map-holder
 							#map
 						.contact-info
 							h1.title Контакты
-							address г. Харьков, улица Ромена-Ролана, 9
+							address г. Харьков, проспект Независимости 17 (бывший проспект Правды)
 							.time 
 								strong График работы:
 								span пн.пт. 10:00 - 20:00

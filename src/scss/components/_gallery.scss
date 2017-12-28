@@ -1,6 +1,7 @@
 .section {
     padding: 57px 0;
-    //	background: url(../images/texture.jpg);
+        background: url(../images/texture.jpg);
+        background-size: 500px auto;
     @include media('<desktop') {
         padding: 47px 0;
     }
@@ -61,9 +62,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    @include media('<tablet') {
+  
         flex-wrap: wrap;
-    }
+  
     &:nth-child(2n) {
         flex-direction: row-reverse;
         @include media('<tablet') {
@@ -73,7 +74,8 @@
     .img-holder {
         width: 50%;
         padding: 15px;
-        @include media('<tablet') {
+        margin: 0 auto;
+         @include media('<tablet') {
             width: 100%;
             padding: 0 15% 25px;
             @include media('<phone') {
@@ -91,7 +93,7 @@
         padding: 45px;
         color: $white;
         font-size: 16px;
-        width: 50%;
+        width: 100%;
         background-color: rgba($black, .7);
         @include media('<desktop') {
             padding: 25px;
@@ -108,9 +110,8 @@
 
 .services {
     padding: 57px 0;
-    background: url(../images/wood.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    background: url(../images/texture.jpg);
+    background-size: 500px auto;
     @include media('<desktop') {
         padding: 47px 0;
     }
@@ -266,14 +267,14 @@
     justify-content: space-between;
     .employee-box {
         width: 24%;
-		position: relative;
-		margin-bottom: 15px;
-		@include media('<tablet') {
-			width:49%;
-		}
-		@include media('<phone') {
-			width: 100%;
-		}
+        position: relative;
+        margin-bottom: 15px;
+        @include media('<tablet') {
+            width: 49%;
+        }
+        @include media('<phone') {
+            width: 100%;
+        }
         .share-row {
             position: absolute;
             top: 0;
@@ -302,15 +303,52 @@
             }
         }
         .name {
-			font-size: 18px;
-			padding:10px;
-			background: #000;
-			color:$white;
-		}
+            font-size: 18px;
+            padding: 10px;
+            background: #000;
+            color: $white;
+        }
     }
 }
 
-.wow{
-	animation-duration: 2s;
+.wow {
+    animation-duration: 2s;
 }
 
+body .yButton.bottom.right{
+    @include media('<tablet') {
+    right:0 !important;
+    bottom:8px !important;
+    }
+}
+
+body .yButton{
+    -webkit-animation: alert 3s linear 0s infinite normal ;
+    animation: alert 3s linear 0s infinite normal !important;
+
+}
+
+body{ .yButtonBackground {
+    background: #000 !important;
+    border: 2px solid white;
+    opacity: 1 !important;
+    left: 50%;
+    font-size: 18px;
+   font-weight: bold;
+    @include media('<tablet') {
+        font-size: 10px !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+.yButtonText {
+
+    @include media('<tablet') {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 12px !important;
+        top: 16px !important;
+    left:1px !important; font-weight: bold !important;
+    }
+}
+}
