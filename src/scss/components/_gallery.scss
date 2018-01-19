@@ -222,6 +222,7 @@
             position: relative;
             overflow: hidden;
             display: block;
+            margin-bottom: 15px;
             &:before {
                 content: "\f00e";
                 position: absolute;
@@ -255,7 +256,7 @@
             }
             img {
                 vertical-align: top;
-                margin-bottom: 15px;
+
             }
         }
     }
