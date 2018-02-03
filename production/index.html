@@ -29,6 +29,7 @@
             <li><a class="ms_booking" href="#record">Запись</a></li>
             <li class="social"><a href="https://www.facebook.com/barbershopkharkiv" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
             <li class="social"><a href="https://www.instagram.com/retro_barber_shop/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#job-form" data-fancybox>Работа</a></li>
           </ul>
         </nav>
       </header>
@@ -93,6 +94,56 @@
         </section>
       </main>
       <footer id="footer"></footer>
+      <div class="job-form" id="job-form">
+        <form method="post" action="" id="formMain">
+          <div id="messegeResult"> </div>
+          <div class="holder-elemnt">
+            <div class="col-wrapper">
+              <div class="col">
+                <div class="input-group">
+                  <label for="name">Имя<span class="req">*</span></label>
+                  <input id="namae" type="text" required name="name">
+                </div>
+                <div class="input-group">
+                  <label for="tel">Телефон<span class="req">*</span></label>
+                  <input id="tel" type="tel" required name="tel">
+                </div>
+                <div class="input-group">
+                  <label for="spec">Специальность<span class="req">*</span></label>
+                  <input id="spec" type="text" name="speciality" required>
+                </div>
+                <div class="input-group social-group">
+                  <label>Профили в соцсетях</label>
+                  <input type="text" placeholder="Instagram" name="instagram">
+                  <input type="text" placeholder="Facebook" name="facebook">
+                  <input type="text" placeholder="Other" name="Other">
+                </div>
+              </div>
+              <div class="col">
+                <div class="input-group">
+                  <label for="email">Email<span class="req">*</span></label>
+                  <input id="email" type="email" required name="email">
+                </div>
+                <div class="input-group">
+                  <label for="City">Город<span class="req">*</span></label>
+                  <input id="city" type="text" required name="city">
+                </div>
+                <div class="input-group">
+                  <label for="exp">Опыт работы<span class="req">*</span></label>
+                  <input id="exp" type="text" required name="exp">
+                </div>
+                <div class="input-group">
+                  <label for="abutyou">Расскажите о себе</label>
+                  <textarea name="abutyou" id="abut-you" cols="30" rows="10"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="submit-holder">
+              <button class="sub" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
   <script src="assets/js/vendor.min.js" defer=""></script>
@@ -144,4 +195,22 @@
   <script src="https://use.fontawesome.com/f0b05110df.js"></script>
   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;callback=initMap"></script>
   <script type="text/javascript" src="https://w98578.yclients.com/widgetJS" charset="UTF-8"></script>
+  <script>
+    function AjaxFormRequest(result_id,formMain,url) {
+    jQuery.ajax({
+    url: url,
+    type: "POST",
+    dataType: "html",
+    data: jQuery("#"+formMain).serialize(),
+    success: function(response) {
+    document.getElementById(result_id).innerHTML = response;
+    },
+    error: function(response) {
+    document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+    }
+    });
+    $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
+    $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
+    }
+  </script>
 </html>

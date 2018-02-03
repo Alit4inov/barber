@@ -30,6 +30,8 @@ html(lang='en')
 						li.social
 							a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
 								<i class="fa fa-instagram" aria-hidden="true"></i>
+						li
+							a(href="#job-form" data-fancybox) Работа
 			main#main
 				.section.gallery#gallery1
 					h1.title Салон
@@ -96,4 +98,39 @@ html(lang='en')
 							a(href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;").mail &#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;
 							p.copy ©«Retrobarbershop™» 2017–2018
 			footer#footer
+			#job-form.job-form
+				form(method="post" action="" id="formMain")
+					#messegeResult 
+					.holder-elemnt
+						.col-wrapper
+							.col
+								.input-group
+									label(for="name") Имя<span class="req">*</span>
+									input(id="namae" type="text" required name="name")
+								.input-group
+									label(for="tel") Телефон<span class="req">*</span>
+									input(id="tel" type="tel" required name="tel")
+								.input-group
+									label(for="spec") Специальность<span class="req">*</span>
+									input(id="spec" type="text" name="speciality" required)
+								.input-group.social-group
+									label Профили в соцсетях
+									input(type="text" placeholder="Instagram" name="instagram")
+									input(type="text" placeholder="Facebook" name="facebook")
+									input(type="text" placeholder="Other" name="Other")
+							.col
+								.input-group
+									label(for="email") Email<span class="req">*</span>
+									input(id="email" type="email" required name="email")
+								.input-group
+									label(for="City") Город<span class="req">*</span>
+									input(id="city" type="text" required name="city")
+								.input-group
+									label(for="exp") Опыт работы<span class="req">*</span>
+									input(id="exp" type="text" required name="exp")
+								.input-group
+									label(for="abutyou") Расскажите о себе
+									textarea(name="abutyou" id="abut-you", cols="30", rows="10")
+						.submit-holder
+							button(type="submit" class="sub"  onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')") Отправить
 	include ../partials/foot

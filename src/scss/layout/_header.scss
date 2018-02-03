@@ -135,6 +135,10 @@
                 background-size: 0 0;
                 border-radius: 3px;
                 opacity: 1;
+                @include media('<widescreen') {
+                    padding-left: 10px;
+padding-right: 10px;
+                }
                 @include media('<640px') {
                     font-size: 14px;
                     padding-left: 5px;

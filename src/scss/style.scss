@@ -2,8 +2,10 @@
 // will be correctly compiled during `gulp` and `gulp production`
 
 //* Vendors *//
-@import './node_modules/include-media/dist/include-media';
+//* Components *//
 
+@import './node_modules/include-media/dist/include-media';
+@import 'components/normalize';
 
 //* Abstracts modules *//
 @import 'abstracts/main';
