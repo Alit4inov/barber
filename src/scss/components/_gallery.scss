@@ -1,5 +1,5 @@
 .section {
-    padding: 57px 0;
+    padding: 57px 0 0;
         background: url(../images/texture.jpg);
         background-size: 500px auto;
     @include media('<desktop') {
@@ -92,14 +92,29 @@
     .text-holder {
         padding: 45px;
         color: $white;
-        font-size: 16px;
+        font-size:21px;
         width: 100%;
         background-color: rgba($black, .7);
+        color: rgba(255,255,255,.8);
+        strong{
+            font-weight: 700;
+            color:$white;
+        }
+        .center{
+            text-align: center;
+            font-weight: 300;
+            
+        }
+        p{
+            text-align: justify;
+        }
         @include media('<desktop') {
             padding: 25px;
+            font-size: 18px;
         }
         @include media('<tablet') {
             width: 100%;
+            font-size: 16px;
         }
         .h3 {
             font-size: 24px;
@@ -109,7 +124,7 @@
 }
 
 .services {
-    padding: 57px 0;
+    padding: 57px 0 0;
     background: url(../images/texture.jpg);
     background-size: 500px auto;
     @include media('<desktop') {
@@ -172,7 +187,14 @@
                     padding-left: 15px;
                     margin-bottom: 15px;
                     font-weight: 100;
-                    font-size: 15px;
+                    font-size: 19px;
+                    display: flex;
+                    justify-content: space-between;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                
                     @include media('<desktop') {
                         font-size: 13px;
                     }

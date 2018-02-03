@@ -21,11 +21,11 @@
     .contact-info {
         padding: 40px 60px 20px 80px;
         * {
-            font-family: 'sans-serif';
+    
         }
     }
     * {
-        font-family: 'sans-serif';
+  
     }
     .title {
         text-align: left;
@@ -83,7 +83,7 @@
             content: "\f017";
             left: -25px;
             color: currentColor;
-            top: 2px;
+            top: -2px;
         }
         span {
             display: block;
@@ -108,7 +108,7 @@
             content: "\f0e0";
             left: -25px;
             color: currentColor;
-            top: 2px;
+            top: -2px;
         }
     }
 }
@@ -165,4 +165,7 @@
 }
 #map {
     height: 450px;
+    @include media('<tablet') {
+        height: 250px;
+    }
 }
