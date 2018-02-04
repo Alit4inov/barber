@@ -23,7 +23,7 @@ html(lang='en')
 						li
 							a(href="#contacts") Контакты
 						li
-							a.ms_booking(href="#record") Запись
+							a.ms_booking(href="#record") Запись 
 						li.social
 							a(href="https://www.facebook.com/barbershopkharkiv" target="_blank")
 								<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -31,7 +31,7 @@ html(lang='en')
 							a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
 								<i class="fa fa-instagram" aria-hidden="true"></i>
 						li
-							a(href="#job-form" data-fancybox) Работа
+							a(data-fancybox class="fancybox"  data-src="#job-form" href="javascript:;") Работа
 			main#main
 				.section.gallery#gallery1
 					h1.title Салон
@@ -98,6 +98,7 @@ html(lang='en')
 							a(href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;").mail &#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;
 							p.copy ©«Retrobarbershop™» 2017–2018
 			footer#footer
+				include ../partials/foot
 			#job-form.job-form
 				form(method="post" action="" id="formMain")
 					#messegeResult 
@@ -133,4 +134,3 @@ html(lang='en')
 									textarea(name="abutyou" id="abut-you", cols="30", rows="10")
 						.submit-holder
 							button(type="submit" class="sub"  onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')") Отправить
-	include ../partials/foot

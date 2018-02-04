@@ -26,10 +26,10 @@
             <li><a href="#gallery1">Салон</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#contacts">Контакты</a></li>
-            <li><a class="ms_booking" href="#record">Запись</a></li>
+            <li><a class="ms_booking" href="#record">Запись </a></li>
             <li class="social"><a href="https://www.facebook.com/barbershopkharkiv" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
             <li class="social"><a href="https://www.instagram.com/retro_barber_shop/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="#job-form" data-fancybox>Работа</a></li>
+            <li><a class="fancybox" data-fancybox data-src="#job-form" href="javascript:;">Работа</a></li>
           </ul>
         </nav>
       </header>
@@ -93,7 +93,78 @@
           </div>
         </section>
       </main>
-      <footer id="footer"></footer>
+      <footer id="footer">
+        <script src="assets/js/vendor.min.js" defer=""></script>
+        <script src="assets/js/app.js" defer=""></script>
+        <script>
+          function initMap() {
+          var uluru = {lat: 50.006266, lng: 36.235285};
+          var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 18,
+              center: uluru,
+              styles: [
+                          {
+                              "stylers": [
+                                  {
+                                      "hue": "#ff1a00"
+                                  },
+                                  {
+                                      "invert_lightness": true
+                                  },
+                                  {
+                                      "saturation": -100
+                                  },
+                                  {
+                                      "lightness": 33
+                                  },
+                                  {
+                                      "gamma": 0.5
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "water",
+                              "elementType": "geometry",
+                              "stylers": [
+                                  {
+                                      "color": "#2D333C"
+                                  }
+                              ]
+                          }
+                      ]
+          });
+          var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+          });
+          
+          }
+        </script>
+        <script src="https://use.fontawesome.com/f0b05110df.js"></script>
+        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;callback=initMap"></script>
+        <script type="text/javascript" src="https://w98578.yclients.com/widgetJS" charset="UTF-8"></script>
+        <script>
+          function AjaxFormRequest(result_id,formMain,url) {
+          if (document.getElementById(formMain).checkValidity()) {
+          jQuery.ajax({
+          url: url,
+          type: "POST",
+          dataType: "html",
+          data: jQuery("#"+formMain).serialize(),
+          success: function(response) {
+          document.getElementById(result_id).innerHTML = response;
+          },
+          error: function(response) {
+          document.getElementById(result_id).innerHTML = "<span class='error'>Возникла ошибка при отправке формы. Попробуйте еще раз</error>";
+          
+          }
+          });
+          $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
+          $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
+          } 
+          }
+        </script>
+      </footer>
       <div class="job-form" id="job-form">
         <form method="post" action="" id="formMain">
           <div id="messegeResult"> </div>
@@ -146,71 +217,4 @@
       </div>
     </div>
   </body>
-  <script src="assets/js/vendor.min.js" defer=""></script>
-  <script src="assets/js/app.js" defer=""></script>
-  <script>
-    function initMap() {
-    var uluru = {lat: 50.006266, lng: 36.235285};
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 18,
-        center: uluru,
-        styles: [
-                    {
-                        "stylers": [
-                            {
-                                "hue": "#ff1a00"
-                            },
-                            {
-                                "invert_lightness": true
-                            },
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 33
-                            },
-                            {
-                                "gamma": 0.5
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#2D333C"
-                            }
-                        ]
-                    }
-                ]
-    });
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-    });
-    
-    }
-  </script>
-  <script src="https://use.fontawesome.com/f0b05110df.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;callback=initMap"></script>
-  <script type="text/javascript" src="https://w98578.yclients.com/widgetJS" charset="UTF-8"></script>
-  <script>
-    function AjaxFormRequest(result_id,formMain,url) {
-    jQuery.ajax({
-    url: url,
-    type: "POST",
-    dataType: "html",
-    data: jQuery("#"+formMain).serialize(),
-    success: function(response) {
-    document.getElementById(result_id).innerHTML = response;
-    },
-    error: function(response) {
-    document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
-    }
-    });
-    $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
-    $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
-    }
-  </script>
 </html>

@@ -13,19 +13,20 @@ if($_POST)
     $exp = $_POST['exp'];
     $about_you = $_POST['abutyou'];
 
-    $message ="Bмя:  " . $name . "\r\n\r\n" .
-              "Телефон:  " . $tel .  "\r\n\r\n" .
-              "Email:  " . $from .  "\r\n\r\n" .
-              "Cпециальность:  " . $speciality . "\r\n\r\n" .
-              "Профиль Instarram:  " . $profile_instagramm . "\r\n\r\n" .
-              "Профиль Facebook:  " . $profile_facebook . "\r\n\r\n" .
-              "Профиль другой соц. сети:  " . $profile_other.  "\r\n\r\n" .
-              "Город:  " . $city . "\r\n\r\n" .
-              "Опыт:  " . $exp . "\r\n\r\n" .
+    $message ="Имя:  " . $name . "<br />\n" .
+              "Телефон:  " . $tel .  "<br />\n" .
+              "Email:  " . $from .  "<br />\n" .
+              "Cпециальность:  " . $speciality . "<br />\n" .
+              "Профиль Instarram:  " . $profile_instagramm . "<br />\n" .
+              "Профиль Facebook:  " . $profile_facebook . "<br />\n" .
+              "Профиль другой соц. сети:  " . $profile_other.  "<br />\n" .
+              "Город:  " . $city . "<br />\n" .
+              "Опыт:  " . $exp . "<br />\n" .
               "О кандидате:  " . $about_you ;
 
     $subject = "Новый кандидат";
-    $headers = "From:" . $from;
+
+    $headers .= "Content-type: text/html; charset=\"utf-8\"";
     $mail_sent = mail($to, $subject, $message , $headers);
     if ($mail_sent){
         echo  "Спасибо за Ваш запрос, " . $name . "!  Мы с вами свяжемся." ;

@@ -16,5 +16,6 @@
             }
         }
         fixScroll();
+        $('.fancybox').fancybox();
     });
 })(jQuery);
