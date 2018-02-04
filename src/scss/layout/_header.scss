@@ -130,7 +130,7 @@
                 font-weight: 400;
                 font-size: 18px;
                 letter-spacing: 1.2px;
-                padding: 2px 23px;
+                padding: 2px 18px;
                 display: inline-block;
                 @include animate(opacity);
                 background-size: 0 0;
@@ -139,6 +139,11 @@
                 @include media('<widescreen') {
                     padding-left: 10px;
 padding-right: 10px;
+font-size: 15px;
+                }
+                @include media('<640px') {
+              
+font-size: 12px;
                 }
                 @include media('<640px') {
                     font-size: 14px;
