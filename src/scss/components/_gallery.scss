@@ -127,6 +127,7 @@
     padding: 57px 0 0;
     background: url(../images/texture.jpg);
     background-size: 500px auto;
+    text-transform: uppercase;
     @include media('<desktop') {
         padding: 47px 0;
     }
@@ -168,7 +169,7 @@
             height: 1px;
         }
         .text-block {
-            width: 32%;
+            width: 32%;    text-transform: uppercase;
             margin-bottom: 30px;
             @include media('<desktop') {
                 padding: 15px;
@@ -185,11 +186,18 @@
                 li {
                     position: relative;
                     padding-left: 15px;
-                    margin-bottom: 15px;
+                    margin-bottom:5px;
                     font-weight: 100;
                     font-size: 19px;
+                    min-height: 44px;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-between; 
+                    @include media('<desktop') {
+                        min-height: 30px;
+                    }
+                    @include media('<phone') {
+                        min-height: 0;
+                    }
                     &:last-child{
                         margin-bottom: 0;
                     }
@@ -200,7 +208,7 @@
                     }
                     strong {
                         font-weight: 900;
-                        padding-left: 5px;
+                        padding-left: 15px;
                         display: inline-block;
                         flex-shrink: 0;
                     }

@@ -94,6 +94,7 @@
         margin: 0 auto;
         padding: 15px 15px;
         justify-content: center;
+        text-transform: uppercase;
         @include media('<phone') {
             flex-wrap: wrap;
             justify-content: center;
