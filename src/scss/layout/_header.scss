@@ -10,6 +10,32 @@
     background-position: 50% 50%;
     background-attachment: fixed;
     position: relative;
+    .time{
+        padding-left: 30px;
+        display: inline-block;
+        position: relative;
+        font-size: 15px;
+        &:before{
+            position: absolute;
+            font: normal normal normal 19px/1 FontAwesome;
+            content: "\f017";
+            left: 0px;
+            color: currentColor;
+            top: -1px;
+        
+        }
+    }
+    .row{
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    .main-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
     @include media('<desktop') {
         background-attachment: scroll;
     }
@@ -34,8 +60,10 @@
     }
     address.adress-top {
         position: absolute;
+
+
         top: 15px;
-        z-index: 24;
+        z-index: 204;
         right: 2%;
         width: 225px;
         font-size: 15px;
@@ -53,6 +81,7 @@
             right: auto;
             font-size: 14px;
             left: 10px;
+            z-index: 99;
         }
         @include media('<tablet') {
             font-size: 13px;
@@ -81,6 +110,7 @@
     }
     .nav-list {
         @extend %listreset;
+     
         margin-top: 30px;
         position: relative;
         display: flex;
@@ -111,6 +141,12 @@
             content: "";
             z-index: 1;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            @include media('<desktop') {
+                bottom:-100px;
+            }
+            @include media('<tablet') {
+                bottom: -50px;
+            }
         }
         li {
             padding: 0 0px;
@@ -138,12 +174,11 @@
                 opacity: 1;
                 @include media('<widescreen') {
                     padding-left: 10px;
-padding-right: 10px;
-font-size: 15px;
+                    padding-right: 10px;
+                    font-size: 15px;
                 }
                 @include media('<640px') {
-              
-font-size: 12px;
+                    font-size: 12px;
                 }
                 @include media('<640px') {
                     font-size: 14px;
@@ -175,7 +210,7 @@ font-size: 12px;
     @include media('<tablet') {
         max-width: 80%;
         margin: 0 auto;
-        top:30%;
+        top: 30%;
     }
 }
 

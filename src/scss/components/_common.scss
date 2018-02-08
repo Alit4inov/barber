@@ -1,6 +1,6 @@
 #wrapper {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
@@ -15,6 +15,7 @@
     font-size: 40px;
     margin-bottom: 25px;
 }
+
 #messegeResult {
     padding: 10px 10;
     color: green;
@@ -22,9 +23,49 @@
     font-size: 18px;
     font-family: serif;
     text-align: center;
-    width:100%;
+    width: 100%;
     max-width: 100%;
 }
-.error{
-    color:red;
+
+.error {
+    color: red;
+}
+
+.page404 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #000;
+    background-image: url('../images/chair.jpeg');
+    .box{
+        position: absolute;
+        top:50%;
+        left:50%;
+        color:white;
+        text-align: center;
+        font-size: 18px;
+        transform:translate(-50%,-50%);
+        padding:150px;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%,rgba(100,148,186,0) 70%,rgba(125,185,232,0) 100%);
+        h1.h1{
+            font-size: 124px;
+            margin: 0;
+            line-height: 1;
+        }
+        a{
+            text-decoration: none;
+            font-weight:800;
+            @include animate(opacity);
+            &:hover{
+                font-weight: 800;
+                opacity: .8
+            }
+        }
+
+        
+    }
 }

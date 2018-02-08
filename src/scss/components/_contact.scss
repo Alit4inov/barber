@@ -19,12 +19,33 @@
         }
     }
     .contact-info {
-        padding: 40px 60px 20px 80px;
+        padding: 40px 60px 20px 40px;
+        @include media('<widescreen') {
+            padding-right: 10px;
+        }
         * {}
     }
     * {}
     .title {
         text-align: left;
+    }
+    .multi{
+        margin-left: 39px;
+    }
+    .social-networks{
+        @extend %listreset;
+        display: flex;
+        font-size: 35px;
+        margin-bottom: 15px;
+        padding-top: 0px;
+        margin-left: -27px;
+        a:hover{
+            opacity: .6;
+        }
+        li{
+            margin-right: 15px;
+        }
+    
     }
 }
 
@@ -52,11 +73,12 @@
     }
     .copy {
         position: absolute;
-        bottom: 5px;
+        bottom: 0px;
         font-size: 11px;
         color: rgba(255, 255, 255, .7);
         max-width: none;
-        left: 60px;
+        left: 15px;
+
     }
     a {
         display: block;
@@ -161,9 +183,10 @@
 }
 
 #map {
-    height: 450px;
+    min-height: 450px;
+    height: 100%;
     @include media('<tablet') {
-        height: 250px;
+        min-height: 250px;
     }
 }
 

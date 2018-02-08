@@ -10,11 +10,13 @@ html(lang='en')
 						a(href="tel:‎0507482299") ‎050 7482299
 						a(href="tel:‎0637482299") ‎063 7482299
 						a(href="tel:‎0987482299") ‎098 7482299 <span class="info"><span class="viber"></span><span class="wa"></span> </span>
+					p.row
+						span.time 10:00 - 21:00
 				.logo-holder
-					a(href="#main" alt="logo").logo
-						img(src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" height="auto")
+					div.logo
+						img(src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" )
 				nav.main-nav
-					span.nav-opener
+					span.nav-opener 
 					ul.nav-list
 						li
 							a(href="#gallery1") Салон
@@ -24,12 +26,6 @@ html(lang='en')
 							a(href="#contacts") Контакты
 						li
 							a.ms_booking(href="#record") Запись 
-						li.social
-							a(href="https://www.facebook.com/barbershopkharkiv" target="_blank")
-								<i class="fa fa-facebook-official" aria-hidden="true"></i>
-						li.social
-							a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
-								<i class="fa fa-instagram" aria-hidden="true"></i>
 						li
 							a(data-fancybox class="fancybox"  data-src="#job-form" href="javascript:;") Работа
 			main#main
@@ -94,7 +90,17 @@ html(lang='en')
 							.tel
 								a(href="tel:‎0507482299") ‎050 7482299
 								a(href="tel:‎0637482299") ‎063 7482299
-								a(href="tel:‎0987482299") ‎098 7482299 <span class="viber"></span><span class="wa"></span> <span class="info">(WhatsUp Viber)</span>
+								a(href="tel:‎0987482299").multi ‎098 7482299 
+									<span class="viber"></span>
+									<span class="wa"></span>
+									<span class="info">(WhatsUp Viber)</span>
+							ul.social-networks
+								li.social
+									a(href="https://www.facebook.com/barbershopkharkiv" target="_blank")
+										<i class="fa fa-facebook-official" aria-hidden="true"></i>
+								li.social
+									a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
+											<i class="fa fa-instagram" aria-hidden="true"></i>
 							a(href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;").mail &#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;
 							p.copy ©«Retrobarbershop™» 2017–2018
 			footer#footer
@@ -107,7 +113,7 @@ html(lang='en')
 							.col
 								.input-group
 									label(for="name") Имя<span class="req">*</span>
-									input(id="namae" type="text" required name="name")
+									input(id="name" type="text" required name="name")
 								.input-group
 									label(for="tel") Телефон<span class="req">*</span>
 									input(id="tel" type="tel" required name="tel")
@@ -124,13 +130,13 @@ html(lang='en')
 									label(for="email") Email<span class="req">*</span>
 									input(id="email" type="email" required name="email")
 								.input-group
-									label(for="City") Город<span class="req">*</span>
+									label(for="city") Город<span class="req">*</span>
 									input(id="city" type="text" required name="city")
 								.input-group
 									label(for="exp") Опыт работы<span class="req">*</span>
 									input(id="exp" type="text" required name="exp")
 								.input-group
-									label(for="abutyou") Расскажите о себе
+									label(for="abut-you") Расскажите о себе
 									textarea(name="abutyou" id="abut-you", cols="30", rows="10")
 						.submit-holder
 							button(type="submit" class="sub"  onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')") Отправить
