@@ -1,20 +1,24 @@
 doctype html
 html(lang='en')
 	include ../partials/head
-	body
+	body(itemscope itemtype="http://schema.org/Organization")
 		#wrapper
 			header#header
-				address.adress-top 
-					p г.Харьков, проспект Независимости, 17
+				address.adress-top(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") 
+					p 
+						span(itemprop="addressLocality") г.Харьков, 
+						span(itemprop="streetAddress") проспект Независимости, 17
+						span.shema-hidden(itemprop="postalCode") 61022
 					.tel
-						a(href="tel:‎0507482299") ‎050 7482299
-						a(href="tel:‎0637482299") ‎063 7482299
-						a(href="tel:‎0987482299") ‎098 7482299 <span class="info"><span class="viber"></span><span class="wa"></span> </span>
+						a(href="tel:‎0507482299" itemprop="telephone") ‎050 7482299
+						a(href="tel:‎0637482299" itemprop="telephone") ‎063 7482299
+						a(href="tel:‎0987482299" itemprop="telephone") ‎098 7482299 <span class="info"><span class="viber"></span><span class="wa"></span> </span>
 					p.row
 						span.time 10:00 - 21:00
 				.logo-holder
+					.shema-hidden(itemprop="name") RETROBARBERSHOP
 					div.logo
-						img(src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" )
+						img(itemprop="logo" src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" )
 				nav.main-nav
 					span.nav-opener 
 					ul.nav-list
@@ -30,7 +34,7 @@ html(lang='en')
 							a(data-fancybox class="fancybox"  data-src="#job-form" href="javascript:;") Работа
 			main#main
 				.section.gallery#gallery1
-					h1.title Салон
+					h1.title(itemprop="description") Мужская парикмахерская в Харькове
 					.container
 						.gallery-wrapper
 							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
@@ -50,7 +54,7 @@ html(lang='en')
 							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
 								img(src="assets/images/photo.jpg", alt="img descr")
 				section.services#services
-					h1.title Услуги
+					h2.title Услуги
 					.container
 						.boxes-holder
 							.text-block.wow.fadeIn
@@ -68,7 +72,7 @@ html(lang='en')
 									li Детская стрижка <strong>200 грн.</strong>
 									li Папа + сын <strong>400 грн.</strong>
 				section.about#about
-					h1.title О нас
+					h2.title О нас
 					.container
 						.row
 							.img-holder.wow.slideInLeft
@@ -102,6 +106,8 @@ html(lang='en')
 									a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
 											<i class="fa fa-instagram" aria-hidden="true"></i>
 							a(href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;").mail &#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;
+							span(itemprop="email").shema-hidden info@retrobarbershop.kh.ua
+							a(href="https://retrobarbershop.kh.ua/" itemprop="url").shema-hidden https://retrobarbershop.kh.ua/
 							p.copy ©«Retrobarbershop™» 2017–2018
 			footer#footer
 				include ../partials/foot
