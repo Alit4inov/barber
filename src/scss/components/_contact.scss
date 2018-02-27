@@ -133,6 +133,17 @@
 .tel {
     position: relative;
     margin-bottom: 25px;
+   &:before {
+        position: absolute;
+        font: normal normal normal 19px/1 FontAwesome;
+        content: "\f095";
+        left: -25px;
+        color: currentColor;
+        top: 60%;
+        
+        font-size: 70px;
+        transform: translateY(-50%) rotate(5deg);
+    }
     a {
         position: relative;
         vertical-align: middle;
@@ -145,15 +156,7 @@
             letter-spacing: 1px;
         }
     }
-    a:before {
-        position: absolute;
-        font: normal normal normal 19px/1 FontAwesome;
-        content: "\f095";
-        left: -25px;
-        color: currentColor;
-        top: 2px;
-        font-size: 15px;
-    }
+ 
     .viber {
         content: '';
         margin: 0 3px;

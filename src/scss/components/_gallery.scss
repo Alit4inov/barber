@@ -1,32 +1,72 @@
 .section {
-    padding: 57px 0 0;
-        background: url(../images/texture.jpg);
-        background-size: 500px auto;
-        
+    padding: 31px 0 72;
+      .title-holder{
+          text-align: center;
+      }
+    .title{
+        color:$white;
+        font-size: 30px;
+        margin-bottom: 32px;
+        margin-top:0;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:before,&:after{
+            content: '';
+            position: absolute;
+            top:37%;
+            right:calc(100% + 74px);
+            height:10px;
+            width: 112px;
+            background: currentColor;
+        }
+        &:after{
+            right:auto;
+           left:calc(100% + 74px);
+        }
+    }
+    &.gallery{
+        padding:31px 0 77px;
+        background: url(../images/bg-gallery.jpg);
+        background-size: cover;
+        position: relative;
+        .gallery-wrapper{
+            padding:49px 23px 0;
+            z-index: 101;
+            position: relative;
+            border:10px solid $white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a{
+                width:22.3%;
+                margin-bottom: 38px;
+            }
+            img{
+               width: 100%;
+
+            }
+        }
+        &:before{
+            content: '';
+            
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:-120px;
+            bottom:-100px;
+            background: repeating-linear-gradient( -45deg, black 0px, black 12px, transparent 11px, transparent 36px);
+        }
+    }
     @include media('<desktop') {
         padding: 47px 0;
     }
     @include media('<tablet') {
         padding: 30px 0;
     }
-    .title {
-        color: white;
-        background: rgba($black, .7);
-        border: 2px solid $black;
-        margin-bottom: 55px;
-        border-left: none;
-        border-right: none;
-        padding: 5px 0;
-        line-height: 1;
-        font-size: 32px;
-        @include media('<desktop') {
-            margin-bottom: 45px;
-        }
-        @include media('<tablet') {
-            margin-bottom: 35px;
-            font-size: 24px;
-        }
-    }
+    
 }
 
 .about {

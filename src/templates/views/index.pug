@@ -3,58 +3,32 @@ html(lang='en')
 	include ../partials/head
 	body(itemscope itemtype="http://schema.org/Organization")
 		#wrapper
-			header#header
-				address.adress-top(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") 
-					p 
-						span(itemprop="addressLocality") г.Харьков, 
-						span(itemprop="streetAddress") проспект Независимости, 17
-						span.shema-hidden(itemprop="postalCode") 61022
-					.tel
-						a(href="tel:‎0507482299" itemprop="telephone") ‎050 7482299
-						a(href="tel:‎0637482299" itemprop="telephone") ‎063 7482299
-						a(href="tel:‎0987482299" itemprop="telephone") ‎098 7482299 <span class="info"><span class="viber"></span><span class="wa"></span> </span>
-					p.row
-						span.time 10:00 - 21:00
-				.logo-holder
-					.shema-hidden(itemprop="name") RETROBARBERSHOP
-					div.logo
-						img(itemprop="logo" src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="400" )
-				nav.main-nav
-					span.nav-opener 
-					ul.nav-list
-						li
-							a(href="#gallery1") Салон
-						li
-							a(href="#services") Услуги
-						li
-							a(href="#contacts") Контакты
-						li
-							a.ms_booking(href="#record") Запись 
-						li
-							a(data-fancybox class="fancybox"  data-src="#job-form" href="javascript:;") Работа
+			include ../partials/header
 			main#main
 				.section.gallery#gallery1
-					h1.title(itemprop="description") Мужская парикмахерская в Харькове
+					.title-holder
+						h1.title(itemprop="description") Мужская парикмахерская в Харькове
 					.container
 						.gallery-wrapper
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
-								img(src="assets/images/photo_307_1-min.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
-								img(src="assets/images/photo.jpg", alt="img descr")
-							a(href="assets/images/photo.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
-								img(src="assets/images/photo.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_1-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="assets/images/photo_480_1-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_2-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="assets/images/photo_480_2-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_3-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="assets/images/photo_480_3-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_4-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="assets/images/photo_480_4-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_5-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="assets/images/photo_480_5-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_6-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="assets/images/photo_480_6-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_7-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="assets/images/photo_480_7-min.jpg", alt="img descr")
+							a(href="assets/images/photo_1920_8-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="assets/images/photo_480_8-min.jpg", alt="img descr")
 				section.services#services
-					h2.title Услуги
+					.title-holder
+						h2.title Услуги
 					.container
 						.boxes-holder
 							.text-block.wow.fadeIn
@@ -72,7 +46,8 @@ html(lang='en')
 									li Детская стрижка <strong>200 грн.</strong>
 									li Папа + сын <strong>400 грн.</strong>
 				section.about#about
-					h2.title О нас
+					.title-holder
+						h2.title О нас
 					.container
 						.row
 							.img-holder.wow.slideInLeft

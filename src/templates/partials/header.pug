@@ -1,0 +1,29 @@
+header#header
+	address.adress-top(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") 
+		p 
+			span(itemprop="addressLocality") г.Харьков, 
+			span(itemprop="streetAddress") проспект Независимости, 17
+			span.shema-hidden(itemprop="postalCode") 61022
+		.tel
+			a(href="tel:‎0507482299" itemprop="telephone") ‎050 7482299
+			a(href="tel:‎0637482299" itemprop="telephone") ‎063 7482299
+			a(href="tel:‎0987482299" itemprop="telephone") ‎098 7482299
+		p.row
+			span.time 10:00 - 21:00
+	.logo-holder
+		.shema-hidden(itemprop="name") RETROBARBERSHOP
+		div.logo
+			img(itemprop="logo" src="assets/images/logo.svg", alt="RETROBARBERSHOP" width="430" )
+	nav.main-nav
+		span.nav-opener 
+		ul.nav-list
+			li
+				a(href="#gallery1") Салон
+			li
+				a(href="#services") Услуги
+			li
+				a(href="#contacts") Контакты
+			li
+				a.ms_booking(href="#record") Запись 
+			li
+				a(data-fancybox class="fancybox"  data-src="#job-form" href="javascript:;") Работа
