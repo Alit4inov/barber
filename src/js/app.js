@@ -17,5 +17,11 @@
         }
         fixScroll();
         $('.fancybox').fancybox();
+        $(".yButtonText").click(function(){
+            _gaq.push(['_trackEvent', 'Button', 'Press']);
+        });
+        if ($('body').hasClass('en')) {
+            $('.yButtonText').text('online booking');
+        }
     });
 })(jQuery);

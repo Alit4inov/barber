@@ -13,6 +13,10 @@
         position: relative;
         margin: 0 auto;
         font-size: 20px;
+        @include media('<phone') {
+            margin: 0;
+            margin-bottom: 15px;
+        }
     }
     .contact-info {
         position: relative;
@@ -20,6 +24,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include media('<phone') {
+            align-items: flex-start;
+        }
         &:before {
             position: absolute;
             top: -76px;
@@ -52,14 +59,22 @@
         text-transform: uppercase;
         font-size: 33px;
         margin-bottom: 44px;
+        @include media('<tablet') {
+            margin-bottom: 22px;
+        }
+        @include media('<phone') {
+            margin-bottom: 5px;
+        }
     }
     .social-networks {
         @extend %listreset;
         display: flex;
-        font-size: 35px;
+        font-size: 47px;
         margin-bottom: 15px;
         padding-top: 0px;
-        margin-left: -27px;
+        @include media('<tablet') {
+            margin-bottom: 10px;
+        }
         a:hover {
             opacity: .6;
         }
@@ -76,15 +91,26 @@
         &:before {
             position: absolute;
             left: -34px;
+            @include media('<phone') {
+                left: 0;
+            }
+        }
+        @include media('<phone') {
+            margin: 0;
+            margin-bottom: 15px;
+            padding-left: 70px;
         }
     }
 }
 
 .map-holder {
-    width: 73%;
+    width: 70%;
     background-color: $gray;
     position: relative;
     z-index: 9999;
+    @include media('<widescreen') {
+        width: 65%;
+    }
     @include media('<desktop') {
         width: 50%;
     }
@@ -95,15 +121,24 @@
 
 .contact-info {
     position: relative;
-    width: 27%;
+    width: 30%;
     background-color: $black;
     color: $white;
-    padding: 31px 5px 20px 55px;
+    padding: 31px 5px 20px 35px;
+    @include media('<widescreen') {
+        width: 35%;
+        padding: 31px 5px 20px 30px;
+    }
     @include media('<desktop') {
         width: 50%;
     }
     @include media('<tablet') {
+        padding: 31px 5px 20px 25px;
         width: 100%;
+    }
+    @include media('<phone') {
+        text-align: left;
+        padding: 45px 5px 15px 15px;
     }
     .copy {
         position: absolute;
@@ -129,9 +164,15 @@
         margin-bottom: 25px;
         position: relative;
         font-size: 20px;
+        @include media('<phone') {
+            margin-bottom: 15px;
+        }
         strong {
             font-size: 25px;
             font-weight: 400;
+            @include media('<tablet') {
+                font-size: 20px;
+            }
         }
         span {
             display: block;
