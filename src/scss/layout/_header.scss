@@ -10,6 +10,12 @@
     background-position: 50% 50%;
     background-attachment: fixed;
     position: relative;
+    &.header-top{
+        height: auto !important;
+        background-color: black;
+        background-image: none;
+        padding-top: 100px;
+    }
     @include media('<desktop') {
         background-attachment: scroll;
     }
@@ -161,6 +167,7 @@
         text-transform: uppercase;
         @include media('<tablet') {
             flex-wrap: wrap;
+            padding-top: 10px;
         }
         @include media('<phone') {
             padding: 20px 15px;
@@ -212,27 +219,27 @@
                 border-radius: 3px;
                 opacity: 1;
                 letter-spacing: 0;
+                @include media('<1400px') {
+                    font-size: 30px;
+                }
                 @include media('<widescreen') {
                     padding-left: 10px;
                     padding-right: 10px;
                     font-size: 27px;
                 }
                 @include media('<desktop') {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 @include media('<tablet') {
                     font-size: 18px;
-                    padding-left: 5px;
-                    right: 5px;
+                    padding: 3px 10px;
                 }
                 // @include media('<640px') {
                 //     font-size: 14px;
                 //     padding-left: 5px;
                 //     right: 5px;
                 // }
-                @include media('<phone') {
-                    padding: 0 5px;
-                }
+            
                 &:hover {
                     opacity: .8;
                 }

@@ -2,7 +2,7 @@
     'use strict';
     $(() => {
         new WOW().init();
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"].sm-scroll');
         function fixScroll() {
             var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/);
             if (iOS) {
