@@ -1,0 +1,145 @@
+doctype html
+html(lang='en')
+	include ../partials/head-en
+	body(itemscope itemtype="http://schema.org/Organization")
+		#wrapper
+			include ../partials/header-top-eng
+			main#main
+				section.section.gallery#gallery1
+					.title-holder
+						h1.title(itemprop="description") Interior and barbers
+					.container
+						.gallery-wrapper
+							a(href="../assets/images/photo_1920_1-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="../assets/images/photo_480_1-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_2-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="../assets/images/photo_480_2-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_3-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+								img(src="../assets/images/photo_480_3-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_4-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="../assets/images/photo_480_4-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_5-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+								img(src="../assets/images/photo_480_5-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_6-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="../assets/images/photo_480_6-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_7-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+								img(src="../assets/images/photo_480_7-min.jpg", alt="img descr")
+							a(href="../assets/images/photo_1920_8-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+								img(src="../assets/images/photo_480_8-min.jpg", alt="img descr")
+				section.training-registration.section
+					.container
+						h1.h1 Sign up for training
+						form(method="post" action="").training-form#training-form1
+							#messageResult1
+							.input-row
+								input(id="tr-name" type="text" required name="tr-name" placeholder="Name")
+								input(id="tr-tel" type="tel" required name="tr-tel" placeholder="Phone number")
+								span(onclick="AjaxFormRequest('messageResult1', 'training-form1', '../training-form-to-email.php')").submit-training Записаться
+				section.section.about#about.about-training
+					.title-holder
+						h2.title Studying 
+					.container
+						.row
+							.text-holder.wow.fadeInUp
+								p Для тех, кто хочет освоить профессию барбера, которая, на сегодняшний день, является одной из самых перспективных не только в Украине, мы предлагаем обучение «курс с нуля», который включает в себя объемный теоретический раздел и индивидуальные отработки стрижек на моделях, что будет являться одним из преимуществ нашего курса! 
+								p Итак, что же включает в себя курс, который мы Вам предлагаем:
+								h3.h3.text-center Теория
+								ol 
+									li Вводная лекция, на которой Вы познакомитесь с нашими барберами-коучами, которые более подробнее разложат Вам по полочкам весь курс обучения и дадут рекомендации как лучше усваивать излагаемый Вам материал.
+									li Инструмент, раздел, в котором, Вас научат какой именно инструмент используется в работе барбера, как правильно им пользовать и, что немаловажно, как правильно за ним ухаживать, чтобы его ресурс был максимально продолжительным.
+									li Основы стрижки: 
+										ul 
+											li методы и способы стрижки
+											li формы стрижки
+											li разделение проборов
+											li линия окантовки
+									li Типы волос, форма головы, особенности черепа.
+									li Fade, как элемент стрижки. Данный пункт вывели в отдельный блок, так как именно Fade является важной частью в стрижках, которые делаются в барбершопах.
+									li Культура бритья.
+									li Коммуникация с клиентом, является неотъемлемой частью работы профессионального мастера, мы на своем опыте расскажем Вам как находить общий язык с человеком, который сел к Вам в кресло и, чтобы после стрижки, он встал с кресла Вашим другом.
+									li Косметика в барбершопе.
+								h3.h3.text-center Практический раздел
+								p На практике мы разберем с Вами следующие стрижки:                   
+								ul
+									li Undercut
+									li Quiff
+									li Slick back
+									li Top knot
+									li Pompadour
+									li Side cut
+									li Side Part
+									li Crew cut
+									li Crop
+									li Flat top
+									li Short
+								p Весь курс обучения займет 2 месяца, после отправления запроса на курс, с Вами свяжутся и расскажут более подробно о программе и ее стоимости. До встречи на нашем курсе!!!
+				//- section.training-registration.section
+				//- 	.container
+				//- 		h1.h1 Sign up for training
+				//- 		form(method="post" action="" id="training-form2").training-form
+				//- 			#messageResult2
+				//- 			.input-row
+				//- 				input(id="tr-name" type="text" required name="tr-name" placeholder="Name")
+				//- 				input(id="tr-tel" type="tel" required name="tr-tel" placeholder="Phone number")
+				//- 				span(onclick="AjaxFormRequest('messageResult2', 'training-form2', '../training-form-to-email.php')").submit-training Записаться
+				//- section.contact#contacts
+				//- 	.map-holder
+				//- 		#map
+				//- 	.contact-info
+				//- 		h2.title Contacts
+				//- 		address Nezavisimosti Ave., 17, <br> Kharkov, Ukraine
+				//- 		.tel
+				//- 			a(href="tel:‎0507482299") ‎050 7482299
+				//- 			a(href="tel:‎0637482299") ‎063 7482299
+				//- 			a(href="tel:‎0987482299").multi ‎098 7482299 
+				//- 		.time 
+				//- 			strong Working hours:
+				//- 			span Mon - Sun: 10 AM - 9 PM
+				//- 		ul.social-networks
+				//- 			li.social
+				//- 				a(href="https://www.instagram.com/retro_barber_shop/" target="_blank")
+				//- 						<i class="fa fa-instagram" aria-hidden="true"></i>
+				//- 			li.social
+				//- 				a(href="https://www.facebook.com/barbershopkharkiv" target="_blank")
+				//- 					<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				//- 		a(href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;").mail &#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;
+				//- 		span(itemprop="email").shema-hidden info@retrobarbershop.kh.ua
+				//- 		a(href="https://retrobarbershop.kh.ua/" itemprop="url").shema-hidden https://retrobarbershop.kh.ua/
+				//- 		//- p.copy ©«Retrobarbershop™» 2017–2018
+			footer#footer
+				include ../partials/foot-en
+			#job-form.job-form
+				form(method="post" action="" id="formMain")
+					#messegeResult 
+					.holder-elemnt
+						.col-wrapper
+							.col
+								.input-group
+									label(for="name") Имя<span class="req">*</span>
+									input(id="name" type="text" required name="name")
+								.input-group
+									label(for="tel") Телефон<span class="req">*</span>
+									input(id="tel" type="tel" required name="tel")
+								.input-group
+									label(for="spec") Специальность<span class="req">*</span>
+									input(id="spec" type="text" name="speciality" required)
+								.input-group.social-group
+									label Профили в соцсетях
+									input(type="text" placeholder="Instagram" name="instagram")
+									input(type="text" placeholder="Facebook" name="facebook")
+									input(type="text" placeholder="Other" name="Other")
+							.col
+								.input-group
+									label(for="email") Email<span class="req">*</span>
+									input(id="email" type="email" required name="email")
+								.input-group
+									label(for="city") Город<span class="req">*</span>
+									input(id="city" type="text" required name="city")
+								.input-group
+									label(for="exp") Опыт работы<span class="req">*</span>
+									input(id="exp" type="text" required name="exp")
+								.input-group
+									label(for="abut-you") Расскажите о себе
+									textarea(name="abutyou" id="abut-you", cols="30", rows="10")
+						.submit-holder
+							button(type="submit" class="sub"  onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')") Отправить

@@ -34,6 +34,27 @@
     <link rel="manifest" href="../assets/images/favicons/manifest.json">
     <link rel="mask-icon" href="../assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
+    <script>
+      function AjaxFormRequest(result_id,formMain,url) {
+      if (document.getElementById(formMain).checkValidity()) {
+      jQuery.ajax({
+      url: url,
+      type: "POST",
+      dataType: "html",
+      data: jQuery("#"+formMain).serialize(),
+      success: function(response) {
+      document.getElementById(result_id).innerHTML = response;
+      },
+      error: function(response) {
+      document.getElementById(result_id).innerHTML = "<span class='error'>Oops, there is some problem while sending the form, try again later or contact us by phone.</span>";
+      
+      }
+      });
+      $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
+      $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
+      } 
+      }
+    </script>
   </head>
   <body class="en" itemscope itemtype="http://schema.org/Organization">
     <div id="wrapper">
@@ -54,9 +75,10 @@
             <li><a href="#contacts">CONTACTS</a></li>
             <li><a class="ms_booking" href="#record" onclick="_gaq.push(['_trackEvent', 'Button', 'Press']);">ONLINE BOOKING </a></li>
             <li><a class="fancybox" data-fancybox data-src="#job-form" href="javascript:;">CAREER</a></li>
+            <li><a href="training.html">Training</a></li>
             <li>
               <ul class="lang">
-                <li><a href="/">RU</a></li>
+                <li><a href="/training">RU</a></li>
                 <li class="active"><a href="en">EN</a></li>
               </ul>
             </li>
@@ -287,7 +309,7 @@
               </div>
             </div>
             <div class="submit-holder">
-              <button class="sub" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')">Send</button>
+              <button class="sub" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', '../form-to-email.php')">Send</button>
             </div>
           </div>
         </form>

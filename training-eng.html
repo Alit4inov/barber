@@ -56,30 +56,21 @@
       }
     </script>
   </head>
-  <body class="en" itemscope itemtype="http://schema.org/Organization">
+  <body itemscope itemtype="http://schema.org/Organization">
     <div id="wrapper">
-      <header id="header">
-        <address class="adress-top" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"> 
-          <p> <span itemprop="addressLocality">Nezavisimosti Ave., 17,<br></span><span itemprop="streetAddress">Kharkov, Ukraine</span><span class="shema-hidden" itemprop="postalCode">61022</span></p>
-          <div class="tel"><a href="tel:‎0507482299" itemprop="telephone">‎050 7482299</a><a href="tel:‎0637482299" itemprop="telephone">‎063 7482299</a><a href="tel:‎0987482299" itemprop="telephone">‎098 7482299</a></div>
-          <p class="row"><span class="time">10:00 - 21:00</span><span>Daily</span></p>
-        </address>
-        <div class="logo-holder">
-          <div class="shema-hidden" itemprop="name">RETROBARBERSHOP</div>
-          <div class="logo"><img itemprop="logo" src="../assets/images/logo.svg" alt="RETROBARBERSHOP" width="430"></div>
-        </div>
+      <header class="header-top" id="header">
         <nav class="main-nav"><span class="nav-opener"> </span>
           <ul class="nav-list">
-            <li><a href="#gallery1">SALON</a></li>
-            <li><a href="#services">SERVICES</a></li>
+            <li><a href="index.html#gallery1">SALON</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
             <li><a href="#contacts">CONTACTS</a></li>
             <li><a class="ms_booking" href="#record" onclick="_gaq.push(['_trackEvent', 'Button', 'Press']);">ONLINE BOOKING </a></li>
             <li><a class="fancybox" data-fancybox data-src="#job-form" href="javascript:;">CAREER</a></li>
-            <li><a href="training.html">Training</a></li>
+            <li><a class="active" href="training.html">Training</a></li>
             <li>
               <ul class="lang">
-                <li><a href="/training">RU</a></li>
-                <li class="active"><a href="en">EN</a></li>
+                <li><a href="/">RU</a></li>
+                <li class="active"><a href="training.html">EN</a></li>
               </ul>
             </li>
           </ul>
@@ -88,107 +79,69 @@
       <main id="main">
         <section class="section gallery" id="gallery1">
           <div class="title-holder">
-            <h1 class="title" itemprop="description">Barbershop in Kharkov</h1>
+            <h1 class="title" itemprop="description">Interior and barbers</h1>
           </div>
           <div class="container">
             <div class="gallery-wrapper"><a class="img-box wow bounceInLeft" href="../assets/images/photo_1920_1-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_1-min.jpg" alt="img descr"></a><a class="img-box wow bounceInUp" href="../assets/images/photo_1920_2-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_2-min.jpg" alt="img descr"></a><a class="img-box wow bounceInUp" href="../assets/images/photo_1920_3-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_3-min.jpg" alt="img descr"></a><a class="img-box wow bounceInRight" href="../assets/images/photo_1920_4-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_4-min.jpg" alt="img descr"></a><a class="img-box wow bounceInLeft" href="../assets/images/photo_1920_5-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_5-min.jpg" alt="img descr"></a><a class="img-box wow bounceInDown" href="../assets/images/photo_1920_6-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_6-min.jpg" alt="img descr"></a><a class="img-box wow bounceInDown" href="../assets/images/photo_1920_7-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_7-min.jpg" alt="img descr"></a><a class="img-box wow bounceInRight" href="../assets/images/photo_1920_8-min.jpg" data-fancybox="gallery"><img src="../assets/images/photo_480_8-min.jpg" alt="img descr"></a></div>
           </div>
         </section>
-        <section class="section services" id="services">
-          <div class="title-holder">
-            <h2 class="title">Our services</h2>
-          </div>
+        <section class="training-registration section">
           <div class="container">
-            <div class="boxes-holder">
-              <div class="text-block wow fadeIn">
-                <ul class="marked-list">
-                  <li>MEN’S HAIRCUT<strong>250 Hrn</strong></li>
-                  <li>ROYAL SHAVING<strong>250 Hrn</strong></li>
-                  <li>BEARD & MOUSTACHE TRIM<strong>150 Hrn</strong></li>
-                </ul>
+            <h1 class="h1">Sign up for training</h1>
+            <form class="training-form" method="post" action="" id="training-form1">
+              <div id="messageResult1"></div>
+              <div class="input-row">
+                <input id="tr-name" type="text" required name="tr-name" placeholder="Name">
+                <input id="tr-tel" type="tel" required name="tr-tel" placeholder="Phone number"><span class="submit-training" onclick="AjaxFormRequest('messageResult1', 'training-form1', '../training-form-to-email.php')">Записаться</span>
               </div>
-              <div class="text-block wow fadeIn">
-                <ul class="marked-list">
-                  <li>HAIR STYLING <strong>100 Hrn</strong></li>
-                  <li>HAIRCUT+BEARD TRIM<strong>350 Hrn</strong></li>
-                  <li>TRIM <strong>150 Hrn</strong></li>
-                </ul>
-              </div>
-              <div class="text-block wow fadeIn">
-                <ul class="marked-list">
-                  <li>BOY’S HAIRCUT <strong>200 Hrn</strong></li>
-                  <li>FATHER+SON <strong>400 Hrn</strong></li>
-                </ul>
-              </div>
-            </div>
+            </form>
           </div>
         </section>
-        <section class="section about" id="about">
+        <section class="section about about-training" id="about">
           <div class="title-holder">
-            <h2 class="title">ABOUT US</h2>
+            <h2 class="title">Studying </h2>
           </div>
           <div class="container">
             <div class="row">
               <div class="text-holder wow fadeInUp">
-                <h3 class="h3">Barbershop</h3>
-                <p>Hello, gentlemen! We are glad to present you a new barbershop in Kharkov! </p>
-                <p>Our advantages:</p>
-                <ul>
-                  <li> Easy to get from anywhere in Kharkov</li>
-                  <li> You do not have to wait long and you can come with friends</li>
-                  <li> We work quickly and neatly</li>
-                  <li> If you do not want a cup of coffee and a conversation, we can offer you a glass of whiskey and some music</li>
-                </ul>
-                <h3 class="h3">Why we</h3>
-                <p>In our city there are a lot of  hairdressing salons, berbershops and other places, where a man’s face and head can be taken care of. But we still insist - it is better to have your hair cut and face shaved at our salon.</p>
-                <p>We are very attentive to details. Our warm towels do not burn the skin, neither they are ice-cold. You will definitely be pleased.</p>
-                <p>We are creative about any hairstyle. You would like to bring some freshness to you "lumberjack" style but without any major change? No problem - you’ll have you lumberjack. But it will be absolutely new and original every week.</p>
-                <p>The atmosphere here is special. Yes, nowadays everyone  offers coffee or even whiskey. But our barista puts his soul into coffee, and there is always a little more whiskey in your glass. It is difficult to explain, you need to try it at least once.</p>
-                <p>You do not have to waste time on transport, traffic jams and other unnecessary things. It is better to spend half an hour in a pleasant company.</p>
-                <p>We have the best barbers in the city, and every product that a man may need to care for his appearance is also available here. You can not even imagine that there are so many excellent products for your hair, beard and skin. We will help you to look great every day.</p>
-                <p>The salon is always full of people. The brightest representatives of the male part of the city come to us. Here can communicate with interesting people as well as find new useful acquaintances.</p>
-                <p>Comfortable armchairs. You can sit down and relax, get away from work and everyday rush while our barber is working on your style.</p>
-                <p>We do  not hesitate to admit that we are the best barbershop in Kharkov.</p>
-                <h3 class="h3">How to order</h3>
-                <p>If you are a businessman and every minute counts, dial our number +38 (098) 748-22-99. The administrator will register you and you are guaranteed to receive a free chair and the best barber at a given time.</p>
-                <p>If you are a modern person, book online. Just a few clicks, you know what to do.</p>
-                <p>If you know what is really important and appreciate every moment of your life, just come at any convenient time from 10:00 to 21:00. Even if all the barbers are busy, you will have a wonderful time in the company of real men and at least one lovely lady. A glass of whiskey, a cup of coffee and a pleasant conversation about the meaning of life or yesterday's boxing match is guaranteed.</p>
-                <p class="strong">What do we offer and how much does it cost</p>
+                <p>Для тех, кто хочет освоить профессию барбера, которая, на сегодняшний день, является одной из самых перспективных не только в Украине, мы предлагаем обучение «курс с нуля», который включает в себя объемный теоретический раздел и индивидуальные отработки стрижек на моделях, что будет являться одним из преимуществ нашего курса! </p>
+                <p>Итак, что же включает в себя курс, который мы Вам предлагаем:</p>
+                <h3 class="h3 text-center">Теория</h3>
                 <ol> 
-                  <li>Just a haircut - your hair becomes shorter, and you become more attractive</li>
-                  <li>Hairstyle? This is for girls. For men it is enough that all the hair on the head were of the same length - 3 mm.</li>
-                  <li>Every hair of your hairstyle  must know its place</li>
-                  <li>Only those hairs that grow downward are shortened</li>
-                  <li>Everything is serious in here, with warm towels</li>
-                  <li>All-inclusive, we take care of all the hair of your  head</li>
-                  <li>We do not call them children, we treat them like adults. Like young men</li>
-                  <li>Leisure for a strong half of the family</li>
+                  <li>Вводная лекция, на которой Вы познакомитесь с нашими барберами-коучами, которые более подробнее разложат Вам по полочкам весь курс обучения и дадут рекомендации как лучше усваивать излагаемый Вам материал.</li>
+                  <li>Инструмент, раздел, в котором, Вас научат какой именно инструмент используется в работе барбера, как правильно им пользовать и, что немаловажно, как правильно за ним ухаживать, чтобы его ресурс был максимально продолжительным.</li>
+                  <li>Основы стрижки: 
+                    <ul> 
+                      <li>методы и способы стрижки</li>
+                      <li>формы стрижки</li>
+                      <li>разделение проборов</li>
+                      <li>линия окантовки</li>
+                    </ul>
+                  </li>
+                  <li>Типы волос, форма головы, особенности черепа.</li>
+                  <li>Fade, как элемент стрижки. Данный пункт вывели в отдельный блок, так как именно Fade является важной частью в стрижках, которые делаются в барбершопах.</li>
+                  <li>Культура бритья.</li>
+                  <li>Коммуникация с клиентом, является неотъемлемой частью работы профессионального мастера, мы на своем опыте расскажем Вам как находить общий язык с человеком, который сел к Вам в кресло и, чтобы после стрижки, он встал с кресла Вашим другом.</li>
+                  <li>Косметика в барбершопе.</li>
                 </ol>
-                <h3 class="h3 strong">How does it happen</h3>
-                <p>Only you decide what style is best for you while  our barber offers you a lot of interesting options. Each hairstyle, even a very short one, is a small work of art, a combination of creativity and natural beauty.</p>We hire only the best and highly experienced barbers, with  excellent recommendations. Of course, they work not quickly, but as neatly as possible. Time flies, you will not even notice how your style will be perfected, the barber will take off the cape and you will appreciate  his work. 
-                <p>We recommend taking your son with you if you are lucky enough to have one. Visiting men's establishments is, perhaps, the best that a father can teach his son to do. A boy should grow up, seeing vivid examples of correct behavior, and not listening to tedious lectures.</p>
-                <h3 class="h3">When should you visit the barbershop</h3>
-                <p>We recommend visiting our barbershop at least once every 2-3 weeks. No, you do not have to have your  hair cut so often, but the barber  will always find the smallest detail that can be improved. Let your appearance always be flawless, and the length of each hair on the open parts of the body correspond to your wishes to within a millimeter.</p>
-                <p>Choose one day of a week, which belongs only to you. Not necessarily Friday night. Let it be Wednesday morning or Monday lunch. You are free to manage your time and you do not have to obey the same schedule as others. Devote an hour or two only to yourself, turn off the phone and relax. Nothing should interfere with pleasure.</p>
-                <p>Come to us, as soon as your reflection in the mirror will make you uncertain about your looks.</p>
-                <p>We will quickly make things right!</p>
+                <h3 class="h3 text-center">Практический раздел</h3>
+                <p>На практике мы разберем с Вами следующие стрижки:                   </p>
+                <ul>
+                  <li>Undercut</li>
+                  <li>Quiff</li>
+                  <li>Slick back</li>
+                  <li>Top knot</li>
+                  <li>Pompadour</li>
+                  <li>Side cut</li>
+                  <li>Side Part</li>
+                  <li>Crew cut</li>
+                  <li>Crop</li>
+                  <li>Flat top</li>
+                  <li>Short</li>
+                </ul>
+                <p>Весь курс обучения займет 2 месяца, после отправления запроса на курс, с Вами свяжутся и расскажут более подробно о программе и ее стоимости. До встречи на нашем курсе!!!</p>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="contact" id="contacts">
-          <div class="map-holder">
-            <div id="map"></div>
-          </div>
-          <div class="contact-info">
-            <h2 class="title">Contacts</h2>
-            <address>Nezavisimosti Ave., 17, <br> Kharkov, Ukraine</address>
-            <div class="tel"><a href="tel:‎0507482299">‎050 7482299</a><a href="tel:‎0637482299">‎063 7482299</a><a class="multi" href="tel:‎0987482299">‎098 7482299 </a></div>
-            <div class="time"> <strong>Working hours:</strong><span>Mon - Sun: 10 AM - 9 PM</span></div>
-            <ul class="social-networks">
-              <li class="social"><a href="https://www.instagram.com/retro_barber_shop/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li class="social"><a href="https://www.facebook.com/barbershopkharkiv" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-            </ul><a class="mail" href="mailto:&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#064;&amp;#114;&amp;#101;&amp;#116;&amp;#114;&amp;#111;&amp;#098;&amp;#097;&amp;#114;&amp;#098;&amp;#101;&amp;#114;&amp;#115;&amp;#104;&amp;#111;&amp;#112;&amp;#046;&amp;#107;&amp;#104;&amp;#046;&amp;#117;&amp;#097;">&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#116;&#114;&#111;&#098;&#097;&#114;&#098;&#101;&#114;&#115;&#104;&#111;&#112;&#046;&#107;&#104;&#046;&#117;&#097;</a><span class="shema-hidden" itemprop="email">info@retrobarbershop.kh.ua</span><a class="shema-hidden" href="https://retrobarbershop.kh.ua/" itemprop="url">https://retrobarbershop.kh.ua/</a>
           </div>
         </section>
       </main>
@@ -271,19 +224,19 @@
             <div class="col-wrapper">
               <div class="col">
                 <div class="input-group">
-                  <label for="name">Name<span class="req">*</span></label>
+                  <label for="name">Имя<span class="req">*</span></label>
                   <input id="name" type="text" required name="name">
                 </div>
                 <div class="input-group">
-                  <label for="tel">Phone<span class="req">*</span></label>
+                  <label for="tel">Телефон<span class="req">*</span></label>
                   <input id="tel" type="tel" required name="tel">
                 </div>
                 <div class="input-group">
-                  <label for="spec">Specialty<span class="req">*</span></label>
+                  <label for="spec">Специальность<span class="req">*</span></label>
                   <input id="spec" type="text" name="speciality" required>
                 </div>
                 <div class="input-group social-group">
-                  <label>Profiles in social networks</label>
+                  <label>Профили в соцсетях</label>
                   <input type="text" placeholder="Instagram" name="instagram">
                   <input type="text" placeholder="Facebook" name="facebook">
                   <input type="text" placeholder="Other" name="Other">
@@ -295,21 +248,21 @@
                   <input id="email" type="email" required name="email">
                 </div>
                 <div class="input-group">
-                  <label for="city">City<span class="req">*</span></label>
+                  <label for="city">Город<span class="req">*</span></label>
                   <input id="city" type="text" required name="city">
                 </div>
                 <div class="input-group">
-                  <label for="exp">Work experience<span class="req">*</span></label>
+                  <label for="exp">Опыт работы<span class="req">*</span></label>
                   <input id="exp" type="text" required name="exp">
                 </div>
                 <div class="input-group">
-                  <label for="abut-you">Tell us about yourself</label>
+                  <label for="abut-you">Расскажите о себе</label>
                   <textarea name="abutyou" id="abut-you" cols="30" rows="10"></textarea>
                 </div>
               </div>
             </div>
             <div class="submit-holder">
-              <button class="sub" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', '../form-to-email.php')">Send</button>
+              <button class="sub" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form-to-email.php')">Отправить</button>
             </div>
           </div>
         </form>

@@ -5,67 +5,118 @@ html(lang='en')
 		#wrapper
 			include ../partials/header-top
 			main#main
-				section.section.gallery#gallery1
-					.title-holder
-						h1.title(itemprop="description") Интерьер и преподаватели
+				section.training-registration.section
 					.container
-						.gallery-wrapper
-							a(href="assets/images/photo_1920_1-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
-								img(src="assets/images/photo_480_1-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_2-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
-								img(src="assets/images/photo_480_2-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_3-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
-								img(src="assets/images/photo_480_3-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_4-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
-								img(src="assets/images/photo_480_4-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_5-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
-								img(src="assets/images/photo_480_5-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_6-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
-								img(src="assets/images/photo_480_6-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_7-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
-								img(src="assets/images/photo_480_7-min.jpg", alt="img descr")
-							a(href="assets/images/photo_1920_8-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
-								img(src="assets/images/photo_480_8-min.jpg", alt="img descr")
-				include ../partials/training-form
-				section.section.about#about
+						h1.h1 Запись на обучение
+						form(method="post" action="").training-form#training-form1
+							#messageResult1
+							.input-row
+								input(id="tr-name" type="text" required name="tr-name" placeholder="Имя")
+								input(id="tr-tel" type="tel" required name="tr-tel" placeholder="Телефон")
+								span(onclick="AjaxFormRequest('messageResult1', 'training-form1', 'training-form-to-email.php')").submit-training Записаться
+				section.section.about#about.about-training
 					.title-holder
 						h2.title  Обучение
 					.container
 						.row
 							.text-holder.wow.fadeInUp
-								p Для тех, кто хочет освоить профессию барбера, которая, на сегодняшний день, является одной из самых перспективных не только в Украине, мы предлагаем обучение «курс с нуля», который включает в себя объемный теоретический раздел и индивидуальные отработки стрижек на моделях, что будет являться одним из преимуществ нашего курса! 
-								p Итак, что же включает в себя курс, который мы Вам предлагаем:
-								h3.h3 Теория
-								ol 
-									li Вводная лекция, на которой Вы познакомитесь с нашими барберами-коучами, которые более подробнее разложат Вам по полочкам весь курс обучения и дадут рекомендации как лучше усваивать излагаемый Вам материал.
-									li Инструмент, раздел, в котором, Вас научат какой именно инструмент используется в работе барбера, как правильно им пользовать и, что немаловажно, как правильно за ним ухаживать, чтобы его ресурс был максимально продолжительным.
+								dl.def-list
+									dt старт курса: 
+									dd 
+										time(datetime="2019-01-20") 20.01.2019
+									dt длительность: 
+									dd 
+										time(datetime="2019-01-20") 8 занятий
+									dt стоимость: 
+									dd 18 000 грн
+									<br/>
+								p Хочешь стать барбером? Освоить интересную, модную и прибыльную профессию? Мы предлагаем обучение «курс с нуля», который включает в себя объемный теоретический раздел и индивидуальные отработки стрижек на моделях, что будет являться одним из преимуществ нашего курса!
+								ul
+									li Интенсивное обучение − от нуля до профессионала всего за 2 месяца.
+									li Учителя − лучшие барберы Харькова. Откроют все секреты мастерства и продемонстрируют каждый тип стрижки в мельчайших деталях.
+									li Практика на живых моделях. Индивидуальная отработка каждой прически, с каждым учеником.
+									li Маленькие группы − по 5 человек. Коучи будут работать с тобой индивидуально.
+									li Удобное время занятий. Можно совмещать с работой или учебой.
+									li Две недели бесплатной практики для закрепления полученных знаний. Продолжайте тренироваться в нашем барбершопе.
+								h3.h3.text-center Теория
+								ol.indent-list 
+									li Вводная лекция, на которой Вы познакомитесь с нашими барберами-коучами, которые более подробнее разложат Вам по полочкам весь курс обучения и дадут рекомендации как лучше усваивать излагаемый Вам материал. 
+									li Инструмент, раздел, в котором, Вас научат какой именно инструмент используется в работе барбера, как правильно им пользовать и, что немаловажно, как правильно за ним ухаживать, чтобы его ресурс был максимально продолжительным. <br/>
 									li Основы стрижки: 
 										ul 
 											li методы и способы стрижки
 											li формы стрижки
 											li разделение проборов
 											li линия окантовки
-									li Типы волос, форма головы, особенности черепа.
+									li Голова, лицо волосы − типы, виды, особенности. Почему одним людям подходит флет аут, а другим − только андеркат.
 									li Fade, как элемент стрижки. Данный пункт вывели в отдельный блок, так как именно Fade является важной частью в стрижках, которые делаются в барбершопах.
-									li Культура бритья.
+									li Бритье, как искусство. Культура обращения с клиентом и опасной бритвой.
 									li Коммуникация с клиентом, является неотъемлемой частью работы профессионального мастера, мы на своем опыте расскажем Вам как находить общий язык с человеком, который сел к Вам в кресло и, чтобы после стрижки, он встал с кресла Вашим другом.
-									li Косметика в барбершопе.
-								h3.h3 Практический раздел
-								p На практике мы разберем с Вами следующие стрижки:                   
-								ul
-									li Undercut
-									li Quiff
-									li Slick back
-									li Top knot
-									li Pompadour
-									li Side cut
-									li Side Part
-									li Crew cut
-									li Crop
-									li Flat top
-									li Short
-								p Весь курс обучения займет 2 месяца, после отправления запроса на курс, с Вами свяжутся и расскажут более подробно о программе и ее стоимости. До встречи на нашем курсе!!!
-				include ../partials/training-form
+									li Косметика в барбершопе. Тайны косметики и парфюмерии.
+								h3.h3.text-center Практика
+								p На практике мы разберем с Вами следующие стрижки:                 
+								ul 
+									li 
+										strong Undercut.
+										span Сто лет в тренде − от короля Эдварда до наших дней
+									li 
+										strong Quiff.
+										span Самая яркая стрижка с конца 50-х
+									li 
+										strong Slick back.
+										span Как сделать умника из любого мужчины
+									li 
+										strong Pompadour.
+										span Стиль, секс и рок-н-ролл
+									li 
+										strong Side Part.
+										span Его величество пробор
+									li 
+										strong Crew cut.
+										span Все известные спортсмены носят эту прическу
+									li 
+										strong Crop.
+										span Осторожно, имидж деревенского парня часто используют для маскировки
+									li 
+										strong Short.
+										span Короче
+									li 
+										strong Стрижка и моделирование бороды.
+										span Все виды и типы − от маленькой "эспаньолки" до огромного "ламберджека"
+									li 
+										strong Традиционное влажное бритье.
+										span Основа основ для каждого барбера
+								p После окончания курса каждому ученику, по желанию, будет предоставлена возможность на посещение нашего барбершопа еще 14 рабочих дней, дабы закрепить свои знания и окунуться, непосредственно, в рабочие будни и атмосферу этого замечательного искусства!
+				//- section.section.gallery#gallery1
+				//- 	.title-holder
+				//- 		h1.title(itemprop="description") Интерьер и преподаватели
+				//- 	.container
+				//- 		.gallery-wrapper
+				//- 			a(href="assets/images/photo_1920_1-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+				//- 				img(src="assets/images/photo_480_1-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_2-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+				//- 				img(src="assets/images/photo_480_2-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_3-min.jpg" data-fancybox="gallery").img-box.wow.bounceInUp
+				//- 				img(src="assets/images/photo_480_3-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_4-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+				//- 				img(src="assets/images/photo_480_4-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_5-min.jpg" data-fancybox="gallery").img-box.wow.bounceInLeft
+				//- 				img(src="assets/images/photo_480_5-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_6-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+				//- 				img(src="assets/images/photo_480_6-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_7-min.jpg" data-fancybox="gallery").img-box.wow.bounceInDown
+				//- 				img(src="assets/images/photo_480_7-min.jpg", alt="img descr")
+				//- 			a(href="assets/images/photo_1920_8-min.jpg" data-fancybox="gallery").img-box.wow.bounceInRight
+				//- 				img(src="assets/images/photo_480_8-min.jpg", alt="img descr")
+				//- section.training-registration.section
+				//- 	.container
+				//- 		h1.h1 Запись на обучение
+				//- 		form(method="post" action="" id="training-form2").training-form
+				//- 			#messageResult2
+				//- 			.input-row
+				//- 				input(id="tr-name" type="text" required name="tr-name" placeholder="Имя")
+				//- 				input(id="tr-tel" type="tel" required name="tr-tel" placeholder="Телефон")
+				//- 				span(onclick="AjaxFormRequest('messageResult2', 'training-form2', 'training-form-to-email.php')").submit-training Записаться
 				section.contact#contacts
 						.map-holder
 							#map

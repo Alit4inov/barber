@@ -14,7 +14,7 @@
         height: auto !important;
         background-color: black;
         background-image: none;
-        padding-top: 100px;
+        padding-top: 80px;
     }
     @include media('<desktop') {
         background-attachment: scroll;
@@ -219,6 +219,9 @@
                 border-radius: 3px;
                 opacity: 1;
                 letter-spacing: 0;
+                &.active{
+                    text-decoration: underline;
+                }
                 @include media('<1400px') {
                     font-size: 30px;
                 }

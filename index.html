@@ -34,6 +34,27 @@
     <link rel="manifest" href="assets/images/favicons/manifest.json">
     <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
+    <script>
+      function AjaxFormRequest(result_id,formMain,url) {
+      if (document.getElementById(formMain).checkValidity()) {
+      jQuery.ajax({
+      url: url,
+      type: "POST",
+      dataType: "html",
+      data: jQuery("#"+formMain).serialize(),
+      success: function(response) {
+      document.getElementById(result_id).innerHTML = response;
+      },
+      error: function(response) {
+      document.getElementById(result_id).innerHTML = "<span class='error'>Возникла ошибка при отправке формы. Попробуйте еще раз</span>";
+      
+      }
+      });
+      $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
+      $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
+      } 
+      }
+    </script>
   </head>
   <body itemscope itemtype="http://schema.org/Organization">
     <div id="wrapper">
@@ -221,27 +242,6 @@
         <script src="https://use.fontawesome.com/f0b05110df.js"></script>
         <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjFiOeRB49qv_F9Ek8_M47BLBAUI4ZUP0&amp;callback=initMap"></script>
         <script type="text/javascript" src="https://w102132.yclients.com/widgetJS" charset="UTF-8"></script>
-        <script>
-          function AjaxFormRequest(result_id,formMain,url) {
-          if (document.getElementById(formMain).checkValidity()) {
-          jQuery.ajax({
-          url: url,
-          type: "POST",
-          dataType: "html",
-          data: jQuery("#"+formMain).serialize(),
-          success: function(response) {
-          document.getElementById(result_id).innerHTML = response;
-          },
-          error: function(response) {
-          document.getElementById(result_id).innerHTML = "<span class='error'>Возникла ошибка при отправке формы. Попробуйте еще раз</span>";
-          
-          }
-          });
-          $(':input','#formMain').not(':button, :submit, :reset, :hidden').val('');
-          $('#formMain .holder-elemnt').css({position:'absolute', left:'-9999px'});
-          } 
-          }
-        </script>
       </footer>
       <div class="job-form" id="job-form">
         <form method="post" action="" id="formMain">
